@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- ========== SEO META TAGS ========== -->
+  <title>Fatma Sorour | Full-Stack Developer Portfolio - ASP.NET Core & Angular Expert</title>
+  <meta name="description" content="Fatma Sorour - Professional Full-Stack Developer specializing in ASP.NET Core, Angular, MSSQL Server, and enterprise web applications. View portfolio, projects, and work experience.">
+  <meta name="keywords" content="Full-Stack Developer, ASP.NET Core, Angular, MSSQL, Web Developer, Portfolio, Fatma Sorour, .NET Developer, Angular Developer, Shopify Developer">
+  <meta name="author" content="Fatma Mohamed Sorour">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- ========== OPEN GRAPH / SOCIAL MEDIA META TAGS ========== -->
+  <meta property="og:title" content="Fatma Sorour | Full-Stack Developer Portfolio">
+  <meta property="og:description" content="Professional Full-Stack Developer specializing in ASP.NET Core, Angular, MSSQL Server, and enterprise web applications.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fatmasorour8.github.io/portfolio/">
+  <meta property="og:image" content="https://fatmasorour8.github.io/portfolio/og-image.jpg">
+  <meta property="og:site_name" content="Fatma Sorour Portfolio">
+  
+  <!-- ========== FAVICONS ========== -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  
+  <!-- Google Fonts & Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://fatmasorour8.github.io/portfolio/">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fatma Mohamed Sorour",
+    "jobTitle": "Full-Stack Developer",
+    "url": "https://fatmasorour8.github.io/portfolio/",
+    "sameAs": [
+      "https://github.com/FatmaSorour8",
+      "https://www.linkedin.com/in/fatma-mohamed-sorour/",
+      "https://wa.me/201288427468"
+    ],
+    "email": "fatmaa.sorour86@gmail.com",
+    "telephone": "+20 128 842 7468",
+    "address": {
+      "@type": "City",
+      "name": "Cairo",
+      "addressCountry": "Egypt"
+    },
+    "knowsAbout": ["ASP.NET Core", "Angular", "MSSQL Server", "C#", "TypeScript", "Web API", "Entity Framework", "Shopify"],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Positive Side Horizons (PSH)"
+    }
+  }
+  </script>
+</head>
+<body>
+<canvas id="tech-canvas" class="fixed top-0 left-0 w-full h-full z-[-1] pointer-events-none opacity-50 transition-opacity duration-500"></canvas>
+
+  <!-- SIDE MENU (MOBILE) -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="side-menu" id="sideMenu">
+    <div class="close-btn" id="closeSideMenu"><i class="fas fa-times-circle"></i></div>
+    <div class="flex flex-col gap-1">
+      <a href="#home"><i class="fas fa-home"></i> Home</a>
+      <a href="#about"><i class="fas fa-user-astronaut"></i> About</a>
+      <a href="#experience"><i class="fas fa-code"></i> Experience</a>
+      <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+      <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+      <a href="#projects"><i class="fas fa-folder-open"></i> Projects</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+    <div class="theme-toggle-side" id="sideThemeToggle">
+      <i class="fas fa-adjust text-blue-400"></i>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 left-0 w-full z-50 transition-all" style="background: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(128,128,128,0.2);">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex flex-wrap justify-between items-center">
+      <a href="#" class="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">fatma<span class="dark:text-red-500">.dev</span></a>
+      <div class="desktop-nav-links hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex gap-3 items-center">
+          <button id="desktopThemeToggle" class="text-gray-500 hover:text-blue-400 text-xl p-2 transition"><i class="fas fa-moon"></i></button>
+        </div>
+        <div class="mobile-menu-icon text-2xl" id="mobileMenuIcon">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+    <!-- HERO SECTION -->
+    <section id="home" class="relative overflow-hidden mx-6 pt-12 md:pt-20 pb-20 px-6 md:px-10 reveal-section">
+      <div class="max-w-7xl mx-auto hero-grid">
+        <div class="hero-content-area space-y-6 text-left">
+          <div class="text-2xl md:text-3xl font-extrabold tracking-tight">
+            Hello, my name is 
+            <span id="typewriter-text" class="text-3xl md:text-4xl inline-block min-h-[5rem] gradient-text"></span>
+          </div>
+          <h3 class="text-lg md:text-2xl font-semibold" style="color: var(--text-primary);">I'm a <span class="text-blue-400 border-b-2 border-blue-500">Full-Stack Developer</span></h3>
+          <p class="text-gray-400 leading-relaxed" style="color: var(--text-secondary);" id="hero-description">
+            Specialized in ASP.NET Core, Angular, MSSQL Server, and enterprise web applications.
+            Passionate about building scalable, secure, and production-ready systems with clean architecture and modern UI/UX.
+          </p>
+          <div class="flex flex-wrap gap-5 pt-3">
+            <a href="#contact" class="btn-primary px-6 py-3 rounded-full text-white font-semibold shadow-xl flex items-center gap-2"><i class="fas fa-paper-plane"></i> Hire Me</a>
+            <a href="#projects" class="border border-gray-600 hover:border-blue-500 px-6 py-3 rounded-full font-semibold transition-all flex items-center gap-2" style="border-color: var(--text-secondary);"><i class="fas fa-code-branch"></i> View Projects</a>
+            <a href="./assets/Fatma_Sorour_CV.pdf" download="Fatma_Sorour_CV.pdf" id="downloadCvBtn" class="inline-flex items-center gap-2 px-6 py-3 rounded-full transition transform hover:scale-105" style="background: #1f2937; color: white; cursor: pointer;"><i class="fas fa-file-pdf"></i> Download CV</a>
+          </div>
+          <div class="flex gap-6 pt-6 social-links" style="color: var(--text-secondary);">
+            <!-- Social links will be loaded from config -->
+          </div>
+        </div>
+        <div class="hero-image-area">
+          <div class="profile-spinner relative w-46 h-60 md:w-65 md:h-72">
+            <div class="spinning-ring"></div>
+            <div class="spinning-ring-reverse"></div>
+            <div class="relative w-full h-full rounded-full p-0.5 profile-img-wrapper" style="background: transparent;">
+              <div class="profile-img-container w-full h-full rounded-full overflow-hidden" style="background: transparent;">
+                <img class="profile-img w-full h-full object-cover object-center" id="profile-image" src="./assets/profile.png" alt="Fatma Sorour - Full-Stack Developer Profile Picture" onerror="this.src='https://placehold.co/400x400/1e293b/white?text=Fatma'">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="px-6 md:px-10 py-16 md:py-24 max-w-7xl mx-auto reveal-section">
+      <div class="glass-card p-8 md:p-10 stagger-item delay-100">
+        <div class="flex flex-col lg:flex-row gap-10">
+          <div class="flex-1">
+            <span class="text-blue-400 font-mono text-sm uppercase tracking-wider">About me</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2" id="about-name">Fatma Sorour - <span class="gradient-text">Full-Stack Developer</span></h2>
+            <div class="mt-5 space-y-4 leading-relaxed" style="color: var(--text-secondary);" id="about-description">
+              <p>I'm Fatma Mohamed Sorour, a .NET Full-Stack Developer with hands-on experience building enterprise web applications using ASP.NET Core, Angular, MSSQL Server, and Web API technologies.</p>
+              <p>I have practical experience working on real-world enterprise systems including PMO platforms, workflow management systems, shipping systems, and e-commerce solutions.</p>
+            </div>
+            <a href="./assets/Fatma_Sorour_CV.pdf" download="Fatma_Sorour_CV.pdf" id="downloadCvBtn2" class="inline-flex items-center gap-2 mt-6 px-6 py-2.5 rounded-full transition transform hover:scale-105" style="background: #1f2937; color: white; cursor: pointer;"><i class="fas fa-file-pdf"></i> Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="px-6 md:px-10 py-16 max-w-7xl mx-auto reveal-section">
+      <div class="text-center mb-12 stagger-item delay-100">
+        <span class="text-blue-400 font-semibold tracking-wider">my EXPERIENCE</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Work <span class="gradient-text">Experience</span></h2>
+      </div>
+      <div class="relative border-l border-blue-500 ml-4 space-y-10" id="experience-container"></div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="px-6 md:px-10 py-16 max-w-7xl mx-auto reveal-section">
+      <div class="text-center mb-12 stagger-item delay-100">
+        <span class="text-blue-400 font-semibold tracking-wider">my SKILLS</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Technical <span class="gradient-text">Expertise</span></h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8" id="skills-container"></div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="px-6 md:px-10 py-16 max-w-7xl mx-auto rounded-3xl my-8 reveal-section" style="background: var(--bg-secondary);">
+      <div class="text-center mb-12 stagger-item delay-100"><span class="text-blue-400 font-semibold">my EDUCATION</span><h2 class="text-4xl md:text-5xl font-bold mt-2">Education <span class="gradient-text">Background</span></h2></div>
+      <div class="grid md:grid-cols-3 gap-6" id="education-container"></div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="px-6 md:px-10 py-20 max-w-7xl mx-auto reveal-section">
+      <div class="text-center mb-12 stagger-item delay-100"><span class="text-blue-400 font-semibold tracking-widest">my Projects</span><h2 class="text-4xl md:text-5xl font-bold mt-2">Creative <span class="gradient-text">Portfolio</span></h2></div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container"></div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="px-6 md:px-10 py-20 max-w-7xl mx-auto reveal-section">
+      <div class="glass-card p-8 md:p-12 stagger-item delay-100">
+        <div class="grid md:grid-cols-2 gap-10">
+          <div id="contact-info-container"></div>
+          <div>
+            <form id="contactForm" class="space-y-5">
+              <div class="grid grid-cols-2 gap-4">
+                <input type="text" id="firstName" placeholder="First name" required 
+                       class="w-full bg-black/0 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition" 
+                       style="color: var(--text-primary);">
+                <input type="text" id="lastName" placeholder="Last name" required 
+                       class="w-full bg-black/0 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition" 
+                       style="color: var(--text-primary);">
+              </div>
+              <input type="email" id="email" placeholder="Your Email Address" required 
+                     class="w-full bg-black/0 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition" 
+                     style="color: var(--text-primary);">
+              <textarea id="message" rows="4" placeholder="Your message" required 
+                        class="w-full bg-black/0 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition" 
+                        style="color: var(--text-primary);"></textarea>
+              <button type="submit" id="sendBtn" class="btn-primary px-8 py-3 rounded-xl font-semibold w-full transition">
+                <i class="fas fa-paper-plane mr-2"></i> Send Message
+              </button>
+            </form>
+            
+            <div id="form-success" class="hidden mt-4 p-3 rounded-lg bg-green-500/10 border border-green-500/30 text-green-400 text-sm">
+              <i class="fas fa-check-circle mr-2"></i> Message sent successfully!
+            </div>
+            
+            <div id="form-error" class="hidden mt-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+              <i class="fas fa-exclamation-triangle mr-2"></i> Failed to send message.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-8 border-t border-gray-800 text-gray-500 text-sm">
+      <div class="flex flex-col items-center justify-center gap-3">
+        <div class="flex items-center gap-6 pt-6 pb-6 social-links-footer" style="color: var(--text-secondary);"></div>
+        <p>© <span id="currentYear"></span> Fatma Sorour — Full-Stack Developer. All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+  <!-- Data Configuration -->
+  <script src="js/data.js"></script>
+</body>
+</html>
