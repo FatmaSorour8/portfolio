@@ -27,7 +27,7 @@ body.light {
 
 html {
   scroll-behavior: smooth;
-  size: 87%;
+  font-size: 95%;
 }
 
 body {
@@ -228,6 +228,90 @@ body.light .project-tag {
 
 body.light .project-tag:hover {
   background: #cbd5e1;
+}
+
+/* Project card image styles */
+.project-card {
+  overflow: hidden;
+}
+
+.project-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.preview-btn {
+  background: #2563eb;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.preview-btn:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.project-links {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  font-size: 0.75rem;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.project-link.github {
+  color: #60a5fa;
+}
+
+.project-link.demo {
+  color: #a78bfa;
+}
+
+.project-link:hover {
+  opacity: 0.8;
 }
 
 ::-webkit-scrollbar {
@@ -598,4 +682,46 @@ body:not(.light) .dev-dot {
   .back-to-top i {
     font-size: 1.2rem;
   }
+}
+
+/* ========== PROJECTS PAGINATION (appears only when projects are more than 3) ========== */
+.projects-pagination {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+.pagination-btn {
+  min-width: 42px;
+  height: 42px;
+  padding: 0 0.85rem;
+  border-radius: 9999px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-card);
+  backdrop-filter: blur(12px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 30px -20px rgba(59, 130, 246, 0.45);
+}
+.pagination-btn:hover:not(:disabled), .pagination-btn.active {
+  color: #ffffff;
+  border-color: rgba(96, 165, 250, 0.8);
+  background: linear-gradient(95deg, #2563eb, #4f46e5);
+  transform: translateY(-2px);
+}
+.pagination-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.pagination-info {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  padding: 0 0.35rem;
 }
