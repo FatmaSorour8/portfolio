@@ -11,8 +11,8 @@
     "typewriterText": "Fatma Sorour...",
     "title": "Full-Stack Developer",
     "heroDescription": "Specialized in ASP.NET Core, Angular, MSSQL Server, and enterprise web applications. Passionate about building scalable, secure, and production-ready systems with clean architecture and modern UI/UX.",
-    "profileImage": "/assets/profile.png",
-    "cvFile": "/assets/Fatma_Sorour_CV.pdf",
+    "profileImage": "assets/profile.png",
+    "cvFile": "assets/Fatma_Sorour_CV.pdf",
     "aboutSubtitle": "About me",
     "aboutTitle": "Who am I?",
     "aboutDescription": [
@@ -161,7 +161,7 @@
         "NHibernate",
         "SQL Server"
       ],
-      "image": "/assets/project-pmos.png",
+      "image": "assets/project-pmos.png",
       "githubLink": "",
       "liveLink": ""
     },
@@ -174,7 +174,7 @@
         "Angular",
         "SQL Server"
       ],
-      "image": "",
+      "image": "assets/project-masarat.png",
       "githubLink": "",
       "liveLink": ""
     },
@@ -187,7 +187,7 @@
         "SQL Server",
         "LINQ"
       ],
-      "image": "/assets/project-hotelier.png",
+      "image": "assets/project-hotelier.png",
       "githubLink": "",
       "liveLink": ""
     },
@@ -201,7 +201,7 @@
         "SQL Server",
         "Windows Forms"
       ],
-      "image": "/assets/project-exam.png",
+      "image": "assets/project-exam.png",
       "githubLink": "",
       "liveLink": ""
     },
@@ -215,7 +215,7 @@
         "React",
         "IPFS"
       ],
-      "image": "/assets/project-medrecchain.png",
+      "image": "assets/project-medrecchain.png",
       "githubLink": "",
       "liveLink": ""
     }
